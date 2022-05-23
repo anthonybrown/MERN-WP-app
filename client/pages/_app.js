@@ -1,8 +1,11 @@
-import 'antd/dist/antd.css'
+import "antd/dist/antd.css"
+import { ThemeProvider } from "../context/theme"
 
 function MyApp({ Component, pagerProps }) {
   return (
-    <Component {...pagerProps} />
+    <ThemeProvider>
+      <Component {...pagerProps} />
+    </ThemeProvider>
   )
 }
 
