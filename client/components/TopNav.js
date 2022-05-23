@@ -1,4 +1,4 @@
-import { AppstoreOutlined, ControlOutlined, SettingOutlined, RocketOutlined, MailOutlined } from '@ant-design/icons';
+import {  HddOutlined, LoginOutlined, LogoutOutlined, ControlOutlined, SettingOutlined, RocketOutlined, MailOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { useState } from 'react';
 import ToggleTheme from './ToggleTheme'
@@ -8,45 +8,45 @@ const items = [
     label: 'CMS',
     key: 'mail',
     icon: <ControlOutlined /> ,
-  }, {
-    label: 'SignUp',
-    key: 'sign-up',
-    icon: <MailOutlined /> ,
+  },
+  {
+    label: 'Posts',
+    key: 'posts',
+    icon: <HddOutlined />,
+  },
+  {
+    label: 'Contact',
+    key: 'contact',
+    icon: <MailOutlined />,
   },
   {
 
   },
   {
-    label: 'Admin',
+    label: 'Mr. Admin',
     key: 'admin',
     className: "right",
-    icon: <RocketOutlined />,
+    icon: <SettingOutlined />,
     children: [
       {
         type: 'group',
-        label: 'DashBoard',
+        label: 'Managment',
         children: [
           {
-            label: 'Sign up',
-            key: 'sign-up',
-          },
-          {
-            label: 'Sign in',
-            key: 'sign-in',
+            label: 'Dashboard',
+            key: 'dashboard',
+            icon: <RocketOutlined /> ,
           },
         ],
       },
       {
-        type: 'group',
-        label: 'Registration',
+        type: "group",
+        label: 'Others',
         children: [
           {
-            label: 'Register',
-            key: 'register',
-          },
-          {
-            label: 'Sign out',
+            label: 'Sign Out',
             key: 'sign-out',
+            icon: <LogoutOutlined /> ,
           },
         ],
       },
