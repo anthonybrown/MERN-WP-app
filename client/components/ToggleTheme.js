@@ -8,6 +8,7 @@ function ToggleTheme() {
     <>
     <Head>
       <link rel="stylesheet" href={`/css/${theme}.css`} />
+      <link rel="stylesheet" href="/css/styles.css" />
     </Head>
       {theme === "light" ? (
         <span
@@ -15,9 +16,9 @@ function ToggleTheme() {
             setTheme("dark")
             localStorage.setItem("theme", "dark")
           }}
-          style={{ fontSize: "2rem" }}
+          style={{ fontSize: "1.1rem"}}
         >
-          🌝 {theme}
+          🌝
         </span>
       ) : (
         <span
@@ -25,9 +26,9 @@ function ToggleTheme() {
             setTheme("light")
             localStorage.setItem("theme", "light")
           }}
-          style={{ fontSize: "2rem" }}
+          style={{ fontSize: "1.1rem" }}
         >
-          🌑 {theme}
+          🌑
         </span>
       )}
     </>
