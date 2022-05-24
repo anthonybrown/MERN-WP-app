@@ -1,4 +1,3 @@
-import ToggleTheme from "../components/ToggleTheme"
 import { Button } from "antd"
 
 function Home() {

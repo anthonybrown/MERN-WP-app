@@ -1,21 +1,35 @@
-import {  HddOutlined, LoginOutlined, LogoutOutlined, ControlOutlined, SettingOutlined, RocketOutlined, MailOutlined } from '@ant-design/icons';
-import { Menu } from 'antd';
-import { useState } from 'react';
+import {  HddOutlined, LoginOutlined, LogoutOutlined, ControlOutlined, SettingOutlined, RocketOutlined, MailOutlined } from '@ant-design/icons'
+import { Menu } from 'antd'
+import { useState } from 'react'
+import Link from 'next/link'
 import ToggleTheme from './ToggleTheme'
 
 const items = [
   {
-    label: 'CMS',
+
+    label: (
+      <Link href='/'>
+        <a>CMS</a>
+      </Link>
+    ),
     key: 'mail',
     icon: <ControlOutlined /> ,
   },
   {
-    label: 'Posts',
+    label: (
+      <Link href='/signup'>
+        <a>Sign Up</a>
+      </Link>
+    ),
     key: 'posts',
     icon: <HddOutlined />,
   },
   {
-    label: 'Contact',
+    label: (
+      <Link href='/signin'>
+        <a>Sign In</a>
+      </Link>
+    ),
     key: 'contact',
     icon: <MailOutlined />,
   },
@@ -23,7 +37,11 @@ const items = [
 
   },
   {
-    label: 'Mr. Admin',
+    label: (
+      <Link href='/admin'>
+        <a>Mr Admin</a>
+      </Link>
+    ),
     key: 'admin',
     className: "right",
     icon: <SettingOutlined />,
@@ -33,7 +51,11 @@ const items = [
         label: 'Managment',
         children: [
           {
-            label: 'Dashboard',
+            label: (
+              <Link href='/admin'>
+                <a>Dashboard</a>
+              </Link>
+            ),
             key: 'dashboard',
             icon: <RocketOutlined /> ,
           },
@@ -44,7 +66,11 @@ const items = [
         label: 'Others',
         children: [
           {
-            label: 'Sign Out',
+            label: (
+              <Link href='/signout'>
+                <a>Sign Out</a>
+              </Link>
+            ),
             key: 'sign-out',
             icon: <LogoutOutlined /> ,
           },

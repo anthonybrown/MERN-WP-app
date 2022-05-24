@@ -28,7 +28,7 @@ function ToggleTheme() {
           }}
           style={{ fontSize: "1.1rem" }}
         >
-          🌑
+          🌘
         </span>
       )}
     </>
